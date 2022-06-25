@@ -13,11 +13,11 @@ class Post(models.Model):
 class maincoursedb(models.Model):
     title = models.CharField(max_length=30)
     image = models.CharField(max_length=30)
-    description = models.TextField(max_length=250)
+    description = models.TextField(max_length=850)
     category = models.CharField(max_length=25)
     time = models.CharField(max_length=20)
-    descriptiondetail = models.TextField(max_length=600)
-    ingredient = models.TextField(max_length=150)
+    descriptiondetail = models.TextField(max_length=1300)
+    ingredient = models.TextField(max_length=450)
 
     def __str__(self):
         return self.title
@@ -25,11 +25,11 @@ class maincoursedb(models.Model):
 class sweetdb(models.Model):
     title = models.CharField(max_length=30)
     image = models.CharField(max_length=30)
-    description = models.TextField(max_length=250)
+    description = models.TextField(max_length=850)
     category = models.CharField(max_length=25)
     time = models.CharField(max_length=20)
-    descriptiondetail = models.TextField(max_length=600)
-    ingredient = models.TextField(max_length=150)
+    descriptiondetail = models.TextField(max_length=1300)
+    ingredient = models.TextField(max_length=450)
 
     def __str__(self):
         return self.title
@@ -37,11 +37,11 @@ class sweetdb(models.Model):
 class vegetabledb(models.Model):
     title = models.CharField(max_length=30)
     image = models.CharField(max_length=30)
-    description = models.TextField(max_length=250)
+    description = models.TextField(max_length=850)
     category = models.CharField(max_length=25)
     time = models.CharField(max_length=20)
-    descriptiondetail = models.TextField(max_length=600)
-    ingredient = models.TextField(max_length=150)
+    descriptiondetail = models.TextField(max_length=1300)
+    ingredient = models.TextField(max_length=450)
 
     def __str__(self):
         return self.title

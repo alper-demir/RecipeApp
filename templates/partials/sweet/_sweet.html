@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-9">
             <div class="card-body">
-                <a href="{% url 'sweet_detail' blog.id %}"><h5 class="card-title recipe-title">{{ blog.title }} <span class="time">( {{ blog.time }} )</span></h5></a>
+                <a href="{% url 'sweet_detail' blog.id %}"><h5 class="card-title recipe-title"><span id="title">{{ blog.title }}</span> <span class="time">( {{ blog.time }} )</span></h5></a>
                 <p>
                     {{ blog.description }}
                 </p>
