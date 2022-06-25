@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="col-4 md mt-5">
+    <div class="card fa-1x bg-light">
+       <img class="card-img-top" src="{% static "images/card/"|add:post.image %}" alt="" class="img-fluid">
+            <div class="card-body">
+                <h5 class="card-title text-center">{{ post.title }}</h5>
+                <p class="card-text">
+                    {{post.description}}
+                </p>
+                <a href="{% url post.link %}" class="btn btn-danger">Get Started</a>
+            </div>
+    </div>
+</div>

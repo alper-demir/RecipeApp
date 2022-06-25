@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} Recipes Application Home {% endblock %}
+
+{% block link %}
+{#    indicate unique page css path#}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+{% endblock %}
+
+{% block bodybg %}
+    main{
+    background-image: url("{% static 'images/backgrounds/indexbg.jpg' %}");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1200px;
+    background-size:cover;
+    margin-top: 70px;
+    background-attachment:fixed ;
+}
+
+    {% block navbar %} {% include 'partials/navbar.html' %} {% endblock %}
+
+{% endblock %}
+
+{% block main %}
+
+    <section id="cards">
+        <div class="container">
+            <div class="row">
+                {% for post in post %}
+                    {% include 'partials/_index.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}
+

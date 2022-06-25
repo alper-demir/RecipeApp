@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Vegetable {% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
+
+{% block bodybg %}
+    main{
+    background-image: url("{% static 'images/backgrounds/vegetablebg.jpg' %}");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size:cover;
+    margin-top: 70px;
+    background-attachment:fixed ;
+    min-height:100vh;
+}
+
+{% endblock %}
+{% block navbar %} {% include 'partials/navbar-2.html' %} {% endblock %}
+
+{% block main %}
+    <div class="container pt-3">
+        <span id="_title"><h3 class="text-center">Vegetable Recipes</h3><hr></span>
+
+        {% for blog in vegetable %}
+            {% include 'partials/vegetable/_vegetable.html' %}
+        {% endfor %}
+    </div>
+    <div style="height: 150px"></div>
+{% endblock %}
+

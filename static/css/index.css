@@ -1,0 +1,15 @@
+.card:hover{
+    box-shadow: 8px 8px 20px #28383b;
+    top: -15px;
+    animation-name: home_card;
+    animation-duration: .5s;
+}
+
+@keyframes home_card {
+    from{top: 0px;}
+}
+
+img{
+    height: 303px;
+    width: 344px;
+}

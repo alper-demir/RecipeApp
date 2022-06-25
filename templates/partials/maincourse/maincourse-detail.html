@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{ post.title}} {% endblock %}
+
+{% block link %}
+{#    indicate unique page css path#}
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+
+{% endblock %}
+
+{% block bodybg %}
+    main{
+    height:1000px;
+    }
+    body{
+    background: #BBD2C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+{% endblock %}
+
+{% block navbar %} {% include 'partials/navbar.html' %} {% endblock %}
+
+{% block main %}
+
+    <div class="container">
+
+    <div class="card mb-3 post card-details">
+    <div class="row">
+
+        <div class="col-md-3 text-center">
+          <img src="{% static "images/maincourse/"|add:post.image %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+               <h5 class="card-title-details">{{ post.title }} <span class="time">({{ post.time }})</span></h5>
+                <span class="ingredients-title">Ingredients</span>
+                <p class="ingredients pt-2">
+                    {{ post.ingredient }}
+                </p>
+            </div>
+        </div>
+
+        <div class="content card-body">
+            <span class="ingredients-title"><h3>Description</h3></span>
+            <p class="mt-1">{{ post.descriptiondetail }}</p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+{% endblock %}
+

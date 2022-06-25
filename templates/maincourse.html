@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Main Course {% endblock %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/posts.css' %}">
+{% endblock %}
+
+{% block bodybg %}
+    main{
+    background-image: url("{% static 'images/backgrounds/maincoursebg.jpg' %}");
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size:cover;
+    margin-top: 70px;
+    background-attachment:fixed ;
+    min-height:100vh;
+}
+{% endblock %}
+ {% block navbar %} {% include 'partials/navbar-2.html' %} {% endblock %}
+
+{% block main %}
+
+    <div class="container pt-3">
+        <span id="_title"><h3 class="text-center">Main Course Recipes</h3><hr></span>
+
+        {% for blog in maincourse %}
+            {% include 'partials/maincourse/_maincourse.html' %}
+        {% endfor %}
+    </div>
+
+<div style="height: 150px"></div>
+{% endblock %}
+

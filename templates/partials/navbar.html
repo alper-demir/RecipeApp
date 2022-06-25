@@ -1,0 +1,19 @@
+
+<header class="header">
+        <div class="container">
+            <div class="row">
+                <a id="header-logo" href="{% url 'index' %}">
+                    <i class="fa-solid fa-utensils fa-1x"></i>
+                    Recipes App
+                </a>
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="{% url 'maincourse' %}">Main Course</a></li>
+                        <li><a href="{% url 'sweet' %}">Sweet</a></li>
+                        <li><a href="{% url 'vegetable' %}">Vegetables</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</header>

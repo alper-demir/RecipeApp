@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="card card-main">
+    <div class="row">
+
+        <div class="col-md-3">
+            <a href="{% url 'maincourse_detail' blog.id %}"> <img src="{% static "images/maincourse/"|add:blog.image %}" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                <a href="{% url 'maincourse_detail' blog.id %}"><h5 class="card-title recipe-title">{{ blog.title }} <span class="time">( {{ blog.time }} )</span></h5></a>
+                <p>
+                    {{ blog.description }}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div style="height: 20px"></div>
